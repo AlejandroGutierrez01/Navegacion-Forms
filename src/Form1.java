@@ -16,13 +16,16 @@ public class Form1 {
                 if (passwordtxt.getText().equals("12345") && usertxt.getText().equals("Alejandro")) {
                     JFrame frame = new JFrame();
                     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                    frame.setTitle("Biografia");
+                    frame.setTitle("Biografía");
                     frame.pack();
                     frame.setContentPane(new Form2().menuDos);
                     frame.setLocation(460,190);
                     frame.setSize(500, 400);
                     frame.setVisible(true);
                     ((JFrame) SwingUtilities.getWindowAncestor(enviarButton)).dispose();
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "Credenciales Incorrectas", "Error", JOptionPane.PLAIN_MESSAGE);
                 }
             }
         });
